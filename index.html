@@ -21,31 +21,30 @@
 
     header {
       background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158') center/cover no-repeat;
-      height: 90vh;
+      min-height: 90vh;
       color: white;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: flex-start;
       text-align: left;
-      padding: 20px 40px;
+      padding: 20px 40px 100px;
       position: relative;
       scroll-behavior: smooth;
     }
 
     header img.logo {
-      width: 150px;
+      width: 200px;
       position: absolute;
       top: 20px;
       left: 20px;
-      background: transparent;
       animation: fadeInDown 1s ease;
       mix-blend-mode: multiply;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin: 150px 0 10px;
+      margin: 20px 0 10px;
       animation: fadeInUp 1s ease;
     }
 
@@ -78,6 +77,10 @@
       text-decoration: none;
       display: inline-block;
       margin-right: 10px;
+    }
+
+    .cta:hover {
+      background-color: #b0dd29;
     }
 
     .dark .cta {
@@ -147,6 +150,14 @@
       color: #777;
     }
 
+    footer a img {
+      transition: transform 0.3s ease;
+    }
+
+    footer a:hover img {
+      transform: scale(1.2);
+    }
+
     .dark footer {
       background-color: #1e1e1e;
       color: #aaa;
@@ -160,10 +171,12 @@
       header {
         align-items: center;
         text-align: center;
+        padding-bottom: 80px;
       }
       header img.logo {
         position: static;
         margin-bottom: 10px;
+        width: 150px;
       }
     }
 
@@ -247,6 +260,26 @@
   </section>
 
   <footer>
+    <div style="margin-bottom: 10px;">
+      <a href="https://facebook.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" />
+      </a>
+      <a href="https://instagram.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
+        <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" />
+      </a>
+      <a href="https://linkedin.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" alt="LinkedIn" />
+      </a>
+      <a href="https://wa.me/201234567890" target="_blank" style="margin: 0 10px; text-decoration: none;">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="WhatsApp" />
+      </a>
+      <a href="https://tiktok.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
+        <img src="https://cdn-icons-png.flaticon.com/24/3046/3046121.png" alt="TikTok" />
+      </a>
+      <a href="https://youtube.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
+        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" alt="YouTube" />
+      </a>
+    </div>
     &copy; 2025 Octopus Community. All rights reserved.
   </footer>
 </body>

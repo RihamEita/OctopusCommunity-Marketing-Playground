@@ -13,29 +13,65 @@
     }
 
     header {
-      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      padding: 40px;
-      position: relative;
-      background: none;
+      padding: 40px 20px;
     }
 
     header img.logo {
-      width: 600px;
-      max-width: 90%;
+      width: 320px;
+      max-width: 100%;
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
+    .hero {
       text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #444;
       margin-bottom: 30px;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .cta a {
+      background-color: #b6ff00;
+      color: #000;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #a0e100;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #000;
+      font-size: 1.5rem;
     }
 
     footer {
@@ -44,6 +80,7 @@
       text-align: center;
       font-size: 0.9rem;
       color: #666;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -52,10 +89,21 @@
     <img src="octopus-logo-green.jpeg" alt="Octopus Community Logo" class="logo" />
   </header>
 
-  <section>
-    <h2>Welcome to Octopus Community</h2>
-    <p>Empowering Startups with AI, Creativity, and Smart Marketing.</p>
-  </section>
+  <div class="hero">
+    <h1>Grow with Octopus Community</h1>
+    <p>We empower startups with AI, creative strategy, and smart marketing solutions.</p>
+    <div class="cta">
+      <a href="#">WhatsApp Us</a>
+      <a href="#">Schedule a Call</a>
+    </div>
+  </div>
+
+  <div class="social">
+    <a href="#" title="Facebook">🌐</a>
+    <a href="#" title="Instagram">📸</a>
+    <a href="#" title="LinkedIn">💼</a>
+    <a href="#" title="TikTok">🎵</a>
+  </div>
 
   <footer>
     &copy; 2025 Octopus Community. All rights reserved.

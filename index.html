@@ -1,4 +1,3 @@
-<!-- Landing Page for Octopus Community - Targeting Startups -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,200 +8,57 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
       color: #222;
-      background-color: #fff;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    body.dark {
-      background-color: #121212;
-      color: #eee;
     }
 
     header {
-  background: none;
-  height: 90vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  text-align: left;
-  padding: 20px 40px 100px;
-  position: relative;
-  scroll-behavior: smooth;
-  background-attachment: scroll;
-}
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px;
+      position: relative;
+      background: none;
+    }
 
     header img.logo {
-  width: 500px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  animation: fadeInDown 1s ease;
-  mix-blend-mode: multiply;
-}
-
-    header h1 {
-      font-size: 2.5rem;
-      margin: 20px 0 10px;
-      animation: fadeInUp 1s ease;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      animation: fadeInUp 1.5s ease;
-    }
-
-    @keyframes fadeInUp {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes fadeInDown {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    .cta {
-      background-color: #C2F32E;
-      color: #000;
-      padding: 15px 30px;
-      margin-top: 20px;
-      border: none;
-      border-radius: 25px;
-      font-size: 1rem;
-      cursor: pointer;
-      animation: fadeInUp 2s ease;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      margin-right: 10px;
-    }
-
-    .cta:hover {
-      background-color: #b0dd29;
-    }
-
-    .dark .cta {
-      color: #000;
+      width: 600px;
+      max-width: 90%;
     }
 
     section {
       padding: 60px 20px;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
     }
 
     section h2 {
       text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .services-list, .testimonials-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .service-item, .testimonial {
-      background: #f7f7f7;
-      padding: 20px;
-      border-radius: 15px;
-      text-align: center;
-      flex: 1 1 250px;
-      transition: transform 0.3s ease;
-    }
-
-    .service-item:hover, .testimonial:hover {
-      transform: translateY(-5px);
-    }
-
-    .testimonial img {
-      width: 60px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-
-    .dark .service-item, .dark .testimonial {
-      background: #1e1e1e;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: auto;
-    }
-
-    input, textarea {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
+      margin-bottom: 30px;
     }
 
     footer {
-      text-align: center;
-      padding: 30px;
       background-color: #f1f1f1;
-      color: #777;
-    }
-
-    footer a img {
-      transition: transform 0.3s ease;
-    }
-
-    footer a:hover img {
-      transform: scale(1.2);
-    }
-
-    .dark footer {
-      background-color: #1e1e1e;
-      color: #aaa;
-    }
-
-    @media screen and (max-width: 768px) {
-      .services-list, .testimonials-list {
-        flex-direction: column;
-        align-items: center;
-      }
-      header {
-        align-items: center;
-        text-align: center;
-        padding-bottom: 80px;
-      }
-      header img.logo {
-        position: static;
-        margin-bottom: 10px;
-        width: 150px;
-      }
-    }
-
-    header.sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
-  <script>
-    function toggleTheme() {
-      const body = document.body;
-      const logo = document.getElementById('logo');
-      body.classList.toggle('dark');
-      logo.src = body.classList.contains('dark') ? 'octopus-logo-light.jpeg' : 'octopus-logo-green.jpeg';
-    }
-
-    window.addEventListener('scroll', function () {
-      const header = document.querySelector('header');
-      if (window.scrollY > 60) {
-        header.classList.add('sticky');
-      } else {
-        header.classList.remove('sticky');
-      }
-    });
-  </script>
 </head>
+<body>
+  <header>
+    <img src="octopus-logo-green.jpeg" alt="Octopus Community Logo" class="logo" />
+  </header>
+
+  <section>
+    <h2>Welcome to Octopus Community</h2>
+    <p>Empowering Startups with AI, Creativity, and Smart Marketing.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Octopus Community. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -26,20 +26,26 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
+      align-items: flex-start;
+      text-align: left;
+      padding: 20px 40px;
+      position: relative;
+      scroll-behavior: smooth;
     }
 
     header img.logo {
-      width: 180px;
-      margin-bottom: 20px;
+      width: 150px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: transparent;
       animation: fadeInDown 1s ease;
+      mix-blend-mode: multiply;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin: 0 0 10px;
+      margin: 150px 0 10px;
       animation: fadeInUp 1s ease;
     }
 
@@ -102,6 +108,11 @@
       border-radius: 15px;
       text-align: center;
       flex: 1 1 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover, .testimonial:hover {
+      transform: translateY(-5px);
     }
 
     .testimonial img {
@@ -146,6 +157,21 @@
         flex-direction: column;
         align-items: center;
       }
+      header {
+        align-items: center;
+        text-align: center;
+      }
+      header img.logo {
+        position: static;
+        margin-bottom: 10px;
+      }
+    }
+
+    header.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
   </style>
   <script>
@@ -153,12 +179,17 @@
       const body = document.body;
       const logo = document.getElementById('logo');
       body.classList.toggle('dark');
-      if (body.classList.contains('dark')) {
-        logo.src = 'octopus-logo-light.jpeg';
-      } else {
-        logo.src = 'octopus-logo-green.jpeg';
-      }
+      logo.src = body.classList.contains('dark') ? 'octopus-logo-light.jpeg' : 'octopus-logo-green.jpeg';
     }
+
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      if (window.scrollY > 60) {
+        header.classList.add('sticky');
+      } else {
+        header.classList.remove('sticky');
+      }
+    });
   </script>
 </head>
 <body>
@@ -211,7 +242,7 @@
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" rows="4"></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit" class="cta">Send Message</button>
     </form>
   </section>
 

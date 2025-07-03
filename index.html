@@ -21,7 +21,7 @@
 
     header {
       background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158') center/cover no-repeat;
-      min-height: 90vh;
+      height: 90vh;
       color: white;
       display: flex;
       flex-direction: column;
@@ -31,16 +31,17 @@
       padding: 20px 40px 100px;
       position: relative;
       scroll-behavior: smooth;
+      background-attachment: scroll; /* Ensure background doesn't lock */
     }
 
     header img.logo {
-      width: 200px;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      animation: fadeInDown 1s ease;
-      mix-blend-mode: multiply;
-    }
+  width: 380px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  animation: fadeInDown 1s ease;
+  mix-blend-mode: multiply;
+}
 
     header h1 {
       font-size: 2.5rem;
@@ -205,82 +206,3 @@
     });
   </script>
 </head>
-<body>
-  <button class="dark-toggle" onclick="toggleTheme()">Toggle Theme</button>
-  <header>
-    <img id="logo" src="octopus-logo-green.jpeg" alt="Octopus Logo" class="logo">
-    <h1>Grow With Octopus Community</h1>
-    <p>We help startups grow with expert marketing support tailored to their goals.</p>
-    <a href="https://wa.me/201234567890" class="cta">💬 WhatsApp Us</a>
-    <a href="#contact" class="cta">📞 Schedule a Call</a>
-  </header>
-
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="services-list">
-      <div class="service-item">
-        <h3>Brand Strategy</h3>
-        <p>Craft your unique brand story and identity.</p>
-      </div>
-      <div class="service-item">
-        <h3>Social Media</h3>
-        <p>Engaging content + data-driven growth on every platform.</p>
-      </div>
-      <div class="service-item">
-        <h3>Paid Campaigns</h3>
-        <p>High-ROI ads across Meta, TikTok, Google & more.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonials-list">
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Client">
-        <p>"Octopus helped us launch and scale in under 3 months. Incredible support!"</p>
-        <strong>– Sara H., Tech Startup</strong>
-      </div>
-      <div class="testimonial">
-        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Client">
-        <p>"Professional, creative, and results-driven. Highly recommended."</p>
-        <strong>– Ahmed F., E-Commerce Founder</strong>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Let’s Talk!</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="4"></textarea>
-      <button type="submit" class="cta">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
-    <div style="margin-bottom: 10px;">
-      <a href="https://facebook.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook" />
-      </a>
-      <a href="https://instagram.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
-        <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" />
-      </a>
-      <a href="https://linkedin.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" alt="LinkedIn" />
-      </a>
-      <a href="https://wa.me/201234567890" target="_blank" style="margin: 0 10px; text-decoration: none;">
-        <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="WhatsApp" />
-      </a>
-      <a href="https://tiktok.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
-        <img src="https://cdn-icons-png.flaticon.com/24/3046/3046121.png" alt="TikTok" />
-      </a>
-      <a href="https://youtube.com" target="_blank" style="margin: 0 10px; text-decoration: none;">
-        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" alt="YouTube" />
-      </a>
-    </div>
-    &copy; 2025 Octopus Community. All rights reserved.
-  </footer>
-</body>
-</html>

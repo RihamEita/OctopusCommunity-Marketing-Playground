@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Octopus Community | Empowering Startups</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     body {
       margin: 0;
@@ -71,7 +73,68 @@
       margin: 0 10px;
       text-decoration: none;
       color: #000;
-      font-size: 1.5rem;
+      font-size: 2rem;
+      transition: color 0.3s ease;
+    }
+
+    .social a:hover {
+      color: #b6ff00;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background-color: #b6ff00;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .testimonials {
+      max-width: 1000px;
+      margin: 80px auto;
+      text-align: center;
+    }
+
+    .testimonial {
+      display: inline-block;
+      width: 300px;
+      margin: 20px;
+    }
+
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
     }
 
     footer {
@@ -85,11 +148,13 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="octopus-logo-green.jpeg" alt="Octopus Community Logo" class="logo" />
+  <div class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</div>
+
+  <header data-aos="fade-down">
+    <img src="octopus-logo-green-no-bg.png" alt="Octopus Community Logo" class="logo" />
   </header>
 
-  <div class="hero">
+  <div class="hero" data-aos="fade-up">
     <h1>Grow with Octopus Community</h1>
     <p>We empower startups with AI, creative strategy, and smart marketing solutions.</p>
     <div class="cta">
@@ -98,15 +163,257 @@
     </div>
   </div>
 
+  <div class="testimonials" data-aos="zoom-in">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Client" />
+      <p>“Amazing service, super creative and effective!”</p>
+      <strong>— Sara M.</strong>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Client" />
+      <p>“Helped our startup grow fast. Highly recommended!”</p>
+      <strong>— Omar H.</strong>
+    </div>
+  </div>
+
+  <div class="contact-form" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
   <div class="social">
-    <a href="#" title="Facebook">🌐</a>
-    <a href="#" title="Instagram">📸</a>
-    <a href="#" title="LinkedIn">💼</a>
-    <a href="#" title="TikTok">🎵</a>
+    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
   </div>
 
   <footer>
     &copy; 2025 Octopus Community. All rights reserved.
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Octopus Community | Empowering Startups</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #222;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 40px 20px;
+    }
+
+    header img.logo {
+      width: 320px;
+      max-width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .cta {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .cta a {
+      background-color: #b6ff00;
+      color: #000;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #a0e100;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #000;
+      font-size: 2rem;
+      transition: color 0.3s ease;
+    }
+
+    .social a:hover {
+      color: #b6ff00;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background-color: #b6ff00;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .testimonials {
+      max-width: 1000px;
+      margin: 80px auto;
+      text-align: center;
+    }
+
+    .testimonial {
+      display: inline-block;
+      width: 300px;
+      margin: 20px;
+    }
+
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .dark-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #000;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</div>
+
+  <header data-aos="fade-down">
+    <img src="octopus-logo-green-no-bg.png" alt="Octopus Community Logo" class="logo" />
+  </header>
+
+  <div class="hero" data-aos="fade-up">
+    <h1>Grow with Octopus Community</h1>
+    <p>We empower startups with AI, creative strategy, and smart marketing solutions.</p>
+    <div class="cta">
+      <a href="#">WhatsApp Us</a>
+      <a href="#">Schedule a Call</a>
+    </div>
+  </div>
+
+  <div class="testimonials" data-aos="zoom-in">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Client" />
+      <p>“Amazing service, super creative and effective!”</p>
+      <strong>— Sara M.</strong>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Client" />
+      <p>“Helped our startup grow fast. Highly recommended!”</p>
+      <strong>— Omar H.</strong>
+    </div>
+  </div>
+
+  <div class="contact-form" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="social">
+    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+  </div>
+
+  <footer>
+    &copy; 2025 Octopus Community. All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
+
